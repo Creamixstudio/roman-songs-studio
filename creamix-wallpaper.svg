@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380">
+  <defs><text id="mark" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="600" letter-spacing="1.2" font-size="12">Creamix Studio</text></defs>
+  <g fill="#d4c5ce">
+    <use href="#mark" transform="translate(68 47) rotate(-14)" opacity=".099"/>
+    <use href="#mark" transform="translate(253 74) rotate(7) scale(.90)" opacity=".074"/>
+    <use href="#mark" transform="translate(444 32) rotate(-22) scale(1.07)" opacity=".086"/>
+    <use href="#mark" transform="translate(143 154) rotate(13)" opacity=".084"/>
+    <use href="#mark" transform="translate(350 166) rotate(-8) scale(1.03)" opacity=".10"/>
+    <use href="#mark" transform="translate(496 210) rotate(17) scale(.83)" opacity=".078"/>
+    <use href="#mark" transform="translate(60 273) rotate(-6) scale(.92)" opacity=".078"/>
+    <use href="#mark" transform="translate(237 314) rotate(-19)" opacity=".098"/>
+    <use href="#mark" transform="translate(410 346) rotate(10) scale(.94)" opacity=".084"/>
+  </g>
+</svg>

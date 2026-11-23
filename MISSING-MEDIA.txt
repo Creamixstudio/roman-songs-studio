@@ -1,0 +1,21 @@
+Сайт Creamix Studio — отсутствующие медиафайлы.
+Скопируйте перечисленные ниже файлы в корень репозитория с точными именами:
+
+babushka-demo.mp3
+devchonki-demo.mp4
+devchonki-poster.jpg
+eto-moy-stil-preview.mp3
+kapibara-preview.mp3
+kukla-preview-v4.mp3
+mama-kupi-demo.mp3
+na-povtore-preview-v2.mp3
+new-year-console.jpg
+new-year-console.mp4
+new-year-takes.jpg
+new-year-takes.mp4
+noviy-god-preview.mp3
+podruzhki-preview.mp3
+song-covers-studio.png
+u-menya-est-mama-preview.mp3
+
+До добавления этих файлов соответствующие плееры, видео, постеры или социальная обложка не будут работать.
