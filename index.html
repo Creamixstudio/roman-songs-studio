@@ -197,6 +197,11 @@ if (vinylHero) {
   document.head.appendChild(style);
 
   vinylHero.prepend(vinyl);
+  vinyl.style.transition = 'opacity 0.35s ease';
+
+vinyl.addEventListener('animationend', () => {
+  vinyl.style.opacity = '0';
+}, { once: true });
   vinylHero.style.overflow = 'hidden';
 
   function placeVinyl() {
