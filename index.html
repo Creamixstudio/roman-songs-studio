@@ -669,6 +669,29 @@ if (creamixTitle) {
   });
 }
 
+  
+/* Цвет букв как на оригинальной картинке */
+const logoLetters = document.querySelectorAll(
+  '.hero h1 .cm-letter, .hero h1 .creamix-letter'
+);
+
+const logoPalette = [
+  '#F7B2CA',
+  '#F9C0BF',
+  '#FFD2B5',
+  '#FFE2AC',
+  '#FFF0B8',
+  '#D8EFD0',
+  '#B1EBE5'
+];
+
+logoLetters.forEach((letter, i) => {
+  const color = logoPalette[i % 7];
+  letter.style.setProperty('color', color, 'important');
+  letter.style.setProperty('-webkit-text-fill-color', color, 'important');
+  letter.style.setProperty('background', 'none', 'important');
+});
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
