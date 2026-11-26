@@ -620,6 +620,55 @@ if (wordmark) {
     });
 }
 
+  
+/* CREAMIX STUDIO — цвет и сборка букв */
+const creamixTitle = document.querySelector('.hero h1');
+
+if (creamixTitle) {
+  const colors = [
+    '#f8afc9', '#f9bdbd', '#ffd0b4',
+    '#ffe0ad', '#fff0b5', '#d9efd0', '#a9e9e2'
+  ];
+
+  creamixTitle.style.setProperty('background', 'none', 'important');
+  creamixTitle.style.setProperty('-webkit-text-fill-color', 'initial', 'important');
+  creamixTitle.setAttribute('aria-label', 'CREAMIX STUDIO');
+
+  creamixTitle.innerHTML = ['CREAMIX', 'STUDIO'].map(word =>
+    `<span style="display:block;white-space:nowrap">
+      ${[...word].map((letter, i) =>
+        `<span class="creamix-letter" style="
+          display:inline-block;
+          color:${colors[i]};
+          -webkit-text-fill-color:${colors[i]};
+        ">${letter}</span>`
+      ).join('')}
+    </span>`
+  ).join('');
+
+  const letters = creamixTitle.querySelectorAll('.creamix-letter');
+
+  letters.forEach((letter, i) => {
+    letter.style.textShadow =
+      '2px 3px 0 rgba(75,50,70,.65), 4px 6px 8px rgba(0,0,0,.5)';
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const x = (i % 2 ? 22 : -22);
+    const y = (i % 3 ? 14 : -14);
+
+    letter.animate([
+      { opacity:0, transform:`translate(${x}px,${y}px) rotate(5deg)` },
+      { opacity:1, transform:'translate(0,0) rotate(0deg)' }
+    ], {
+      duration:650,
+      delay:i * 35,
+      easing:'ease-out',
+      fill:'both'
+    });
+  });
+}
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
