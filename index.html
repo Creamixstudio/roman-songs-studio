@@ -290,7 +290,7 @@ if (wordmark) {
       if (matchMedia('(prefers-reduced-motion: reduce)').matches)
         return;
 
-      const [x,y,r] = shifts[i % shifts.length];
+      const [x,y,r] = shifts[i % shifts.length].map(v => v * 0.25);
 
       letter.animate([
         {
