@@ -307,6 +307,42 @@ if (releaseCard) {
   releaseCard.style.gap = '36px';
 }
 
+  
+const aboutTarget = document.querySelector('#official-releases');
+
+if (aboutTarget && !document.querySelector('#about')) {
+  aboutTarget.insertAdjacentHTML('afterend', `
+    <section id="about">
+      <div class="eyebrow">О студии</div>
+      <h2>CREAMIX STUDIO</h2>
+
+      <p style="font-size:18px;line-height:1.8;color:#d5d5dd;max-width:900px;margin-top:28px">
+        CREAMIX STUDIO сотрудничает с опытными сонграйтерами,
+        композиторами, аранжировщиками и звукорежиссёрами,
+        в портфолио которых — работы с известными артистами
+        российской сцены.
+      </p>
+
+      <p style="font-size:17px;line-height:1.8;color:#a4cfca;max-width:900px">
+        Для каждого проекта мы собираем команду с нужным
+        опытом — от написания песни до готового релиза.
+      </p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:30px">
+        <div style="padding:20px 25px;background:#191a20;border:1px solid #51404b;border-radius:10px">
+          ♫ &nbsp; Сонграйтеры
+        </div>
+        <div style="padding:20px 25px;background:#191a20;border:1px solid #354a49;border-radius:10px">
+          ♬ &nbsp; Аранжировщики
+        </div>
+        <div style="padding:20px 25px;background:#191a20;border:1px solid #514b39;border-radius:10px">
+          ◉ &nbsp; Звукорежиссёры
+        </div>
+      </div>
+    </section>
+  `);
+}
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
