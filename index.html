@@ -272,6 +272,41 @@ if (releasesSection) {
   `);
 }
 
+  
+const releaseCard = document.querySelector('#official-releases .section-head + div');
+
+if (releaseCard) {
+  const playerSide = document.createElement('div');
+  playerSide.style.cssText = 'flex:1 1 520px;min-width:0';
+
+  while (releaseCard.firstChild) {
+    playerSide.appendChild(releaseCard.firstChild);
+  }
+
+  releaseCard.appendChild(playerSide);
+
+  releaseCard.insertAdjacentHTML('beforeend', `
+    <div style="flex:1 1 230px;min-width:0">
+      <div style="color:#a4cfca;font-size:11px;letter-spacing:2px;margin-bottom:14px">
+        СОЗДАНО В
+      </div>
+
+      <h3 style="font-size:30px;margin:0 0 20px">
+        CREAMIX STUDIO
+      </h3>
+
+      <p style="font-size:17px;line-height:1.8;margin:0">
+        Текст, музыка и аранжировка.
+      </p>
+    </div>
+  `);
+
+  releaseCard.style.display = 'flex';
+  releaseCard.style.flexWrap = 'wrap';
+  releaseCard.style.alignItems = 'center';
+  releaseCard.style.gap = '36px';
+}
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
