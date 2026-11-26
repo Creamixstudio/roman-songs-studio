@@ -286,6 +286,10 @@ if (wordmark) {
   wordmark.querySelectorAll('.cm-letter')
     .forEach((letter, i) => {
       letter.style.display = 'inline-block';
+    
+const shades = ['#ffb5ce','#ffc4c4','#ffd4b8','#ffe4ae','#f7eeb8','#d5edcd','#b4eee8'];
+letter.style.setProperty('-webkit-text-fill-color', shades[i % 7], 'important');
+
 
       if (matchMedia('(prefers-reduced-motion: reduce)').matches)
         return;
