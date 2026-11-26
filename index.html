@@ -254,6 +254,62 @@ body {
   background-attachment: fixed;
 }
 
+
+/* CREAMIX — буквы собираются в название */
+const wordmark = document.querySelector('.hero h1');
+
+if (wordmark) {
+  wordmark.setAttribute('aria-label', 'CREAMIX STUDIO');
+
+  wordmark.style.backgroundImage =
+    'linear-gradient(115deg,#ffd1df,#ffb0c8 30%,#ffe4af 60%,#b5f2e8)';
+
+  wordmark.innerHTML = ['CREAMIX', 'STUDIO']
+    .map(word => `
+      <span>
+        ${[...word].map(letter =>
+          `<span class="cm-letter">${letter}</span>`
+        ).join('')}
+      </span>
+    `).join('');
+
+  const shifts = [
+    [-110,-65,-25], [85,75,22],
+    [-55,110,-18], [115,-35,28],
+    [-95,45,15], [55,-105,-22],
+    [100,65,18], [-80,-85,25],
+    [90,-45,-20], [-120,55,17],
+    [65,95,-25], [-70,-40,20],
+    [110,35,-15]
+  ];
+
+  wordmark.querySelectorAll('.cm-letter')
+    .forEach((letter, i) => {
+      letter.style.display = 'inline-block';
+
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches)
+        return;
+
+      const [x,y,r] = shifts[i % shifts.length];
+
+      letter.animate([
+        {
+          opacity: 0,
+          transform: `translate(${x}px,${y}px) rotate(${r}deg) scale(.65)`
+        },
+        {
+          opacity: 1,
+          transform: 'translate(0,0) rotate(0deg) scale(1)'
+        }
+      ], {
+        duration: 900,
+        delay: i * 65,
+        easing: 'cubic-bezier(.16,.8,.2,1.05)',
+        fill: 'both'
+      });
+    });
+}
+
 </style></head><body><div class="wrap"><nav><a class="brand" href="#">CREAMIX STUDIO<span>АВТОРСКАЯ МУЗЫКА</span></a><div class="navlinks"><a href="#music">Музыка</a><a href="#prices">Стоимость</a><a href="#process">Как это работает</a></div><a class="pill" href="#order">Обсудить песню ↗</a></nav><main><header class="hero"><div class="hero-studio" aria-hidden="true"></div><div class="hero-content"><h1>CREAMIX<span>STUDIO</span></h1>
 <p class="intro">
   Выбирайте готовую песню или закажите свою на близкую вам тему.
