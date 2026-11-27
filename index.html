@@ -330,6 +330,110 @@ letter.style.setProperty('-webkit-text-fill-color', shades[i % 7], 'important');
     0 0 22px rgba(232,168,188,.20);
 }
 
+
+/* 1. Виниловые дорожки — О студии */
+#about {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  right: -100px;
+  top: -110px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 14px,
+    rgba(244,180,207,.16) 15px 16px,
+    transparent 17px 24px
+  );
+  -webkit-mask-image: radial-gradient(
+    circle, #000 5%, transparent 72%
+  );
+  mask-image: radial-gradient(
+    circle, #000 5%, transparent 72%
+  );
+  z-index: 0;
+}
+
+#about > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. Маленький эквалайзер — Релизы */
+#official-releases .section-head::after {
+  content: "";
+  display: block;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 30px;
+  margin-left: auto;
+  background:
+    linear-gradient(#e8a8bc,#e8a8bc)
+      left bottom / 5px 45% no-repeat,
+    linear-gradient(#a4cfca,#a4cfca)
+      center bottom / 5px 85% no-repeat,
+    linear-gradient(#e8a8bc,#e8a8bc)
+      right bottom / 5px 60% no-repeat;
+  animation: cm-equalizer 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes cm-equalizer {
+  to {
+    background-size:
+      5px 90%,
+      5px 35%,
+      5px 100%;
+  }
+}
+
+@media (max-width:650px) {
+  #official-releases .section-head::after {
+    margin: 18px 0 0;
+  }
+}
+
+/* 3. Мягкая подсветка — Стоимость */
+.price {
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.price:hover,
+.price:focus-within {
+  transform: translateY(-5px);
+  border-color: #de91b0;
+  box-shadow:
+    0 16px 42px rgba(0,0,0,.35),
+    0 0 24px rgba(232,168,188,.18),
+    inset 0 0 20px rgba(232,168,188,.04);
+}
+
+.price.featured:hover,
+.price.featured:focus-within {
+  border-color: #a4cfca;
+  box-shadow:
+    0 16px 42px rgba(0,0,0,.35),
+    0 0 24px rgba(164,207,202,.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #official-releases .section-head::after {
+    animation: none;
+  }
+  .price {
+    transition: none;
+  }
+}
+
 </style></head><body><div class="wrap"><nav><a class="brand" href="#">CREAMIX STUDIO<span>АВТОРСКАЯ МУЗЫКА</span></a><div class="navlinks"><a href="#music">Музыка</a><a href="#prices">Стоимость</a><a href="#process">Как это работает</a></div><a class="pill" href="#order">Обсудить песню ↗</a></nav><main><header class="hero"><div class="hero-studio" aria-hidden="true"></div><div class="hero-content"><h1>CREAMIX<span>STUDIO</span></h1>
 <p class="intro">
   Выбирайте готовую песню или закажите свою на близкую вам тему.
