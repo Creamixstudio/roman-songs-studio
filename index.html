@@ -434,6 +434,132 @@ letter.style.setProperty('-webkit-text-fill-color', shades[i % 7], 'important');
   }
 }
 
+
+/* Два релиза — единая музыкальная витрина */
+#official-releases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+#official-releases > .section-head {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+}
+
+#official-releases > .section-head + div,
+#official-releases > #ovdak-lslb {
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 18px !important;
+  margin: 0 !important;
+  padding: 45px 22px 22px !important;
+  min-width: 0;
+  border-radius: 16px !important;
+  background:
+    radial-gradient(circle at 95% 0%,
+      rgba(232,168,188,.14),transparent 55%),
+    #171820 !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,.22);
+  transition: transform .25s, box-shadow .25s;
+}
+
+#official-releases > .section-head + div {
+  border: 1px solid #775263 !important;
+  border-top: 3px solid #e8a8bc !important;
+}
+
+#official-releases > #ovdak-lslb {
+  border: 1px solid #456663 !important;
+  border-top: 3px solid #a4cfca !important;
+  background:
+    radial-gradient(circle at 95% 0%,
+      rgba(164,207,202,.13),transparent 55%),
+    #171820 !important;
+}
+
+#official-releases > .section-head + div::before,
+#official-releases > #ovdak-lslb::before {
+  position: absolute;
+  top: 17px;
+  left: 22px;
+  color: #d9bac7;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+#official-releases > .section-head + div::before {
+  content: "01";
+}
+
+#official-releases > #ovdak-lslb::before {
+  content: "02";
+  color: #a4cfca;
+}
+
+/* Убираем повтор названия над плеером */
+#official-releases > .section-head + div > div:first-child > h3,
+#official-releases > .section-head + div > div:first-child > p,
+#ovdak-lslb > h3,
+#ovdak-lslb > p {
+  display: none !important;
+}
+
+#official-releases > .section-head + div > div:first-child {
+  flex: 0 0 auto !important;
+  width: 100%;
+}
+
+#official-releases iframe {
+  width: 100% !important;
+  max-width: none !important;
+  height: 244px !important;
+  border-radius: 10px;
+}
+
+/* Компактные кредиты первого релиза */
+#official-releases > .section-head + div > div:last-child {
+  flex: 0 0 auto !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #ffffff20;
+}
+
+#official-releases > .section-head + div > div:last-child > * {
+  margin: 0 !important;
+}
+
+#official-releases > .section-head + div > div:last-child h3 {
+  font-size: 17px !important;
+}
+
+#official-releases > .section-head + div > div:last-child p {
+  font-size: 13px !important;
+}
+
+@media (hover: hover) {
+  #official-releases > .section-head + div:hover,
+  #official-releases > #ovdak-lslb:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 42px rgba(0,0,0,.38);
+  }
+}
+
+@media (max-width: 850px) {
+  #official-releases {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style></head><body><div class="wrap"><nav><a class="brand" href="#">CREAMIX STUDIO<span>АВТОРСКАЯ МУЗЫКА</span></a><div class="navlinks"><a href="#music">Музыка</a><a href="#prices">Стоимость</a><a href="#process">Как это работает</a></div><a class="pill" href="#order">Обсудить песню ↗</a></nav><main><header class="hero"><div class="hero-studio" aria-hidden="true"></div><div class="hero-content"><h1>CREAMIX<span>STUDIO</span></h1>
 <p class="intro">
   Выбирайте готовую песню или закажите свою на близкую вам тему.
