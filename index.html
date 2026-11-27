@@ -1058,6 +1058,39 @@ src="https://www.youtube-nocookie.com/embed/0wTJ2_KnZyI"
   }
 }
 
+/* Новый порядок музыкальных разделов */
+const kids = document.querySelector('#music');
+const soldSongs = document.querySelector('#sold');
+const official = document.querySelector('#official-releases');
+const videoProject = document.querySelector('#featured-video');
+const studioAbout = document.querySelector('#about');
+
+if (kids) {
+  const heading = kids.querySelector('.section-head h2');
+  const eyebrow = kids.querySelector('.section-head .eyebrow');
+  const duplicate = kids.querySelector(':scope > h3');
+
+  if (heading) heading.textContent =
+    'Готовые песни для детей и подростков';
+
+  if (eyebrow) eyebrow.textContent = 'Каталог песен';
+
+  if (duplicate &&
+      duplicate.textContent.trim() === 'Детские песни') {
+    duplicate.remove();
+  }
+}
+
+let previous = studioAbout || document.querySelector('.strip');
+
+[kids, soldSongs, official, videoProject].forEach(section => {
+  if (previous && section && previous !== section) {
+    previous.after(section);
+    previous = section;
+  }
+});
+
+  
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
