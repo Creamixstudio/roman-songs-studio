@@ -8,7 +8,9 @@
   css.textContent = `
     .retro90s-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      
+grid-template-columns: repeat(4, minmax(0, 1fr));
+
       gap: 26px 22px;
       max-width: 1100px;
       margin: 18px auto 40px;
