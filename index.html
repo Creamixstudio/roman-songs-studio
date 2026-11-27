@@ -991,6 +991,71 @@ if (releases && !document.querySelector('#rodj-runaway')) {
   `);
 }
 
+  
+/* Наши работы — ZODIAK13 */
+const aboutStudio = document.querySelector('#about');
+
+if (aboutStudio && !document.querySelector('#featured-video')) {
+  aboutStudio.insertAdjacentHTML('afterend', `
+    <section id="featured-video" style="padding:48px 0 30px">
+      <div class="eyebrow">Наши работы</div>
+      <h2 style="margin:14px 0 30px">
+        ZODIAK13 — Крутой поворот
+      </h2>
+
+      <div style="
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        gap:32px;
+      ">
+        <div style="flex:2 1 480px;min-width:0">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/1n4AUIRm2ms"
+            title="ZODIAK13 — Крутой поворот"
+            style="width:100%;aspect-ratio:16/9;border:0;border-radius:12px;display:block"
+            allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div style="flex:1 1 240px;min-width:0">
+          <h3 style="font-size:25px;margin:0 0 18px">
+            ZODIAK13
+          </h3>
+
+          <p style="font-size:16px;line-height:1.8;color:#ddd">
+            Музыкальный проект с участием
+            актёра театра и кино Дмитрия Миллера.
+          </p>
+
+          <p style="font-size:15px;line-height:1.9;color:#a4cfca">
+            Музыка и аранжировка — Роман Быцкевич.<br>
+            Текст — Дмитрий Миллер.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=1n4AUIRm2ms"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="small-link"
+            style="display:inline-block;margin-top:14px">
+            Смотреть на YouTube ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  `);
+
+  const featured = document.querySelector('#featured-video');
+  const releases = document.querySelector('#official-releases');
+
+  if (releases) {
+    featured.after(releases);
+  }
+}
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
