@@ -796,6 +796,39 @@ logoLetters.forEach((letter, i) => {
   letter.style.setProperty('background', 'none', 'important');
 });
 
+  
+/* Второй официальный релиз — OVDAK */
+const ovdakSection = document.querySelector('#official-releases');
+
+if (ovdakSection && !document.querySelector('#ovdak-lslb')) {
+  ovdakSection.insertAdjacentHTML('beforeend', `
+    <div id="ovdak-lslb" style="
+      margin-top:24px;
+      padding:26px;
+      background:#191a20;
+      border:1px solid #3d5657;
+      border-radius:12px;
+    ">
+      <h3 style="font-size:25px;font-weight:400;margin:0 0 8px">
+        ЛСЛБ
+      </h3>
+      <p style="color:#a4cfca;margin:0 0 22px">
+        OVDAK
+      </p>
+      <iframe
+        title="ЛСЛБ — OVDAK"
+        src="https://music.yandex.ru/iframe/album/33463399/track/131567189"
+        width="614"
+        height="244"
+        style="border:none;width:100%;max-width:614px;height:244px;display:block"
+        allow="clipboard-write"
+        loading="lazy">
+      </iframe>
+    </div>
+  `);
+}
+
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
