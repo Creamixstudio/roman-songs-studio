@@ -1145,5 +1145,8 @@ contactContext.textContent=song?'Песня «'+song+'». Выберите, ку
 document.querySelectorAll('a[href="#order"]').forEach(a=>a.addEventListener('click',()=>setContact(a.dataset.song,a.dataset.format)));
 document.querySelectorAll('audio, video').forEach(player=>player.addEventListener('play',()=>document.querySelectorAll('audio, video').forEach(other=>{if(other!==player)other.pause()})));
 
-</script><script src="creamix-90s.js"></script></body></html>
+</script><script src="creamix-90s.js"></script>
+
+<script src="creamix-studio-videos.js" defer></script>
+</body></html>
 
