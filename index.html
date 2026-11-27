@@ -955,6 +955,42 @@ if (ovdakSection && !document.querySelector('#ovdak-lslb')) {
 }
 
 
+  
+/* Третий релиз — RODJ */
+const releases = document.querySelector('#official-releases');
+
+if (releases && !document.querySelector('#rodj-runaway')) {
+  releases.insertAdjacentHTML('beforeend', `
+    <div id="rodj-runaway" style="
+      position:relative;
+      min-width:0;
+      padding:45px 22px 22px;
+      border:1px solid #775263;
+      border-top:3px solid #e8a8bc;
+      border-radius:16px;
+      background:#171820;
+    ">
+      <span style="
+        position:absolute;
+        top:17px;left:22px;
+        color:#d9bac7;
+        font-size:12px;
+        letter-spacing:3px;
+      ">03</span>
+
+      <iframe
+        title="Runaway — RODJ"
+        src="https://music.yandex.ru/iframe/album/44071569/track/156054511"
+        width="614"
+        height="244"
+        style="border:none;width:100%;height:244px;display:block"
+        allow="clipboard-write"
+        loading="lazy">
+      </iframe>
+    </div>
+  `);
+}
+
   const contactTg=document.querySelector('#contact-tg');
 const contactWa=document.querySelector('#contact-wa');
 const contactContext=document.querySelector('#contact-context');
